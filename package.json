@@ -1,13 +1,10 @@
 {
   "name": "generator-polymer-init",
-  "version": "0.0.0",
-  "description": "",
-  "homepage": "",
-  "author": {
-    "name": "Justin Fagnani",
-    "email": "justinfagnani@google.com",
-    "url": ""
-  },
+  "version": "0.0.1",
+  "description": "Bare-bones Polymer element and app scaffolding",
+  "homepage": "https://github.com/Polymer/polytool",
+  "author": "The Polymer Project Authors",
+  "license": "BSD-3-Clause",
   "files": [
     "generators"
   ],
@@ -41,7 +38,6 @@
   "repository": "git@github.com:Polymer/generator-polymer-init.git",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
-  "license": "BSD-3-Clause"
+    "test": "gulp test"
+  }
 }

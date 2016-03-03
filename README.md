@@ -1,6 +1,6 @@
 # generator-polymer-init
 
-Bare-bones element and app scaffolding
+Bare-bones Polymer element and app scaffolding
 
 ## Installation
 
