@@ -94,6 +94,7 @@ module.exports = yeoman.generators.Base.extend({
     let isElement = projectStyle === 'element';
 
     let props = Object.create(this.props);
+    // TODO(justinfagnani): package dir is depth dependent, fix:
     props['packageDir'] = isElement ? '../' : '../../';
 
     let copyAll = (from) => this.fs.copyTpl([
@@ -106,18 +107,21 @@ module.exports = yeoman.generators.Base.extend({
 
     copyAll('common');
     copyAll(projectStyle);
+
+    let elementProps = Object.create(this.props);
+    elementProps['packageDir'] = isElement ? '../' : '../../../';
     this.fs.copyTpl(
       this.templatePath('_element.html'),
       isElement
         ? `${elemenentName}.html`
         : `src/${elemenentName}/${elemenentName}.html`,
-      props);
+      elementProps);
     this.fs.copyTpl(
       this.templatePath('_element_test.html'),
       isElement
         ? `test/${elemenentName}_test.html`
         : `test/${elemenentName}/${elemenentName}_test.html`,
-      props);
+      elementProps);
   },
 
   install() {
