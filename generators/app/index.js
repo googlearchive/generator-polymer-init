@@ -109,7 +109,7 @@ module.exports = yeoman.generators.Base.extend({
     copyAll(projectStyle);
 
     let elementProps = Object.create(this.props);
-    elementProps['packageDir'] = isElement ? '../' : '../../../';
+    elementProps['packageDir'] = isElement ? '../' : '../../bower_components/';
     this.fs.copyTpl(
       this.templatePath('_element.html'),
       isElement
