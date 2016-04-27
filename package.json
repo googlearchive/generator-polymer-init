@@ -35,7 +35,7 @@
       "mocha": true
     }
   },
-  "repository": "git@github.com:Polymer/generator-polymer-init.git",
+  "repository": "git@github.com:PolymerLabs/generator-polymer-init.git",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp test"
