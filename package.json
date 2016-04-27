@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-init",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bare-bones Polymer element and app scaffolding",
   "homepage": "https://github.com/Polymer/polytool",
   "author": "The Polymer Project Authors",
