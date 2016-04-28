@@ -7,21 +7,20 @@
         display: block;
       }
     </style>
+
     <h2>Hello [[prop1]]</h2>
   </template>
 
   <script>
     Polymer({
-
       is: '<%= name %>',
 
       properties: {
         prop1: {
           type: String,
-          value: '<%= name %>',
-        },
-      },
-
+          value: '<%= name %>'
+        }
+      }
     });
   </script>
 </dom-module>
