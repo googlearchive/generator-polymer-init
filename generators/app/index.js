@@ -77,7 +77,12 @@ module.exports = yeoman.generators.Base.extend({
           }
         },
         validate(name) {
-          return name.includes('-');
+          let nameContainsHyphen = name.includes('-');
+          if (!nameContainsHyphen) {
+            _this.log('\nUh oh, custom elements must include a hyphen in '
+              + 'their name. Please try again.');
+          }
+          return nameContainsHyphen;
         },
       },
     ];
