@@ -144,7 +144,13 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install() {
+    this.log(chalk.bold('\nProject generated!'));
+    this.log('Installing dependencies...');
     this.bowerInstall();
   },
 
+  end() {
+    this.log(chalk.bold('\nSetup Complete!'));
+    this.log('Check out your new project README for information about what to do next.\n');
+  },
 });
