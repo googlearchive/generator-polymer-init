@@ -1,5 +1,7 @@
 {
   "name": "<%= name %>",
+<% if (description) { -%>  "description": "<%= description %>",
+<% } -%>
   "dependencies": {
     "polymer": "Polymer/polymer#^1.3.0"
   },

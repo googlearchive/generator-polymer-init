@@ -85,6 +85,20 @@ module.exports = yeoman.generators.Base.extend({
           return nameContainsHyphen;
         },
       },
+      {
+        type: 'input',
+        name: 'description',
+        message: (answers) => {
+          if (answers['project-style'] === 'application') {
+            return 'Brief description of application';
+          } else if (answers['project-style'] === 'element') {
+            return 'Brief description of element';
+          } else {
+            throw new Error(
+              `unknown project-style: ${answers['project-style']}`);
+          }
+        },
+      },
     ];
 
     this.prompt(prompts, (props) => {
