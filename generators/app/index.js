@@ -144,9 +144,20 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install() {
-    this.log(chalk.bold('\nProject generated!'));
-    this.log('Installing dependencies...');
-    this.bowerInstall();
+    var done = this.async();
+    this.log(chalk.bold('\nProject generated!\n'));
+
+    this.prompt({
+      type: 'confirm',
+      name: 'installDeps',
+      message: 'Install bower dependencies now?',
+      default: true
+    }, (props) => {
+      if (props.installDeps) {
+        this.bowerInstall();
+      }
+      done();
+    });
   },
 
   end() {
